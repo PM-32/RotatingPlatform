@@ -1,0 +1,4 @@
+../Core/Src/SrcFiles/FreeRTOS_project.c:24:6:CreateAll	8	static
+../Core/Src/SrcFiles/FreeRTOS_project.c:37:6:TasksCreation	24	static
+../Core/Src/SrcFiles/FreeRTOS_project.c:52:6:SemaphoresCreation	8	static
+../Core/Src/SrcFiles/FreeRTOS_project.c:67:6:vGetAdcDataTask	16	static
