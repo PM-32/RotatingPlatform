@@ -170,9 +170,22 @@ void DebugMon_Handler(void)
 {
    USER CODE BEGIN DMA1_Channel1_IRQn 0
 
+  // Переменная для переключения задач
+  BaseType_t xHigherPriorityTaskWoken;
+
    USER CODE END DMA1_Channel1_IRQn 0
   HAL_DMA_IRQHandler(&hdma_adc1);
    USER CODE BEGIN DMA1_Channel1_IRQn 1
+
+  xHigherPriorityTaskWoken = pdFALSE;
+
+  // Выдача бинарного семафора
+  // задаче по сбору данных с АЦП
+  xSemaphoreGiveFromISR(xAdcSemaphore, &xHigherPriorityTaskWoken);
+
+  // Переключение на более приоритетную задачу
+  // (при xHigherPriorityTaskWoken != 0)
+  portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 
    USER CODE END DMA1_Channel1_IRQn 1
 }*/

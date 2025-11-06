@@ -50,6 +50,8 @@ extern "C" {
 
 /* USER CODE END EM */
 
+void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
 
@@ -60,6 +62,10 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define Potentiometer_Pin GPIO_PIN_0
 #define Potentiometer_GPIO_Port GPIOA
+#define MotorOut1_Pin GPIO_PIN_6
+#define MotorOut1_GPIO_Port GPIOA
+#define MotorOut2_Pin GPIO_PIN_7
+#define MotorOut2_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 /* USER CODE END Private defines */
