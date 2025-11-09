@@ -113,27 +113,36 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>TasksCreation</b> (vo
 <tr class="memitem:a7554bc7eafeac660cee95eff63ac1180" id="r_a7554bc7eafeac660cee95eff63ac1180"><td class="memItemLeft" align="right" valign="top"><a id="a7554bc7eafeac660cee95eff63ac1180" name="a7554bc7eafeac660cee95eff63ac1180"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SemaphoresCreation</b> (void)</td></tr>
 <tr class="memdesc:a7554bc7eafeac660cee95eff63ac1180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание всех семафоров <br /></td></tr>
+<tr class="memitem:a0dcce925f1ec548dddd80bc0e2edb0a0" id="r_a0dcce925f1ec548dddd80bc0e2edb0a0"><td class="memItemLeft" align="right" valign="top"><a id="a0dcce925f1ec548dddd80bc0e2edb0a0" name="a0dcce925f1ec548dddd80bc0e2edb0a0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>QueuesCreation</b> (void)</td></tr>
+<tr class="memdesc:a0dcce925f1ec548dddd80bc0e2edb0a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание всех очередей <br /></td></tr>
 <tr class="memitem:af1f40c8c823036b82d4b06e57375b534" id="r_af1f40c8c823036b82d4b06e57375b534"><td class="memItemLeft" align="right" valign="top"><a id="af1f40c8c823036b82d4b06e57375b534" name="af1f40c8c823036b82d4b06e57375b534"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>vGetAdcDataTask</b> (void *pvParameters)</td></tr>
 <tr class="memdesc:af1f40c8c823036b82d4b06e57375b534"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задача сбора данных,<br  />
 полученных от АЦП (DMA), в массив <br /></td></tr>
+<tr class="memitem:a6713925912ca1a8b7df89ea0f1ab4e40" id="r_a6713925912ca1a8b7df89ea0f1ab4e40"><td class="memItemLeft" align="right" valign="top"><a id="a6713925912ca1a8b7df89ea0f1ab4e40" name="a6713925912ca1a8b7df89ea0f1ab4e40"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>vMotorControlTask</b> (void *pvParameters)</td></tr>
+<tr class="memdesc:a6713925912ca1a8b7df89ea0f1ab4e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задача управления электродвигателем <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Переменные</h2></td></tr>
-<tr class="memitem:af766dc321c1bd2f31037d384abca2288" id="r_af766dc321c1bd2f31037d384abca2288"><td class="memItemLeft" align="right" valign="top"><a id="af766dc321c1bd2f31037d384abca2288" name="af766dc321c1bd2f31037d384abca2288"></a>
-volatile uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_value</b> = 0</td></tr>
-<tr class="memdesc:af766dc321c1bd2f31037d384abca2288"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переменная, хранящая значение текущего преобразования АЦП <br /></td></tr>
 <tr class="memitem:a428f45ba7598c726bf8a8e5dec06b8a2" id="r_a428f45ba7598c726bf8a8e5dec06b8a2"><td class="memItemLeft" align="right" valign="top"><a id="a428f45ba7598c726bf8a8e5dec06b8a2" name="a428f45ba7598c726bf8a8e5dec06b8a2"></a>
 TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>vGetAdcDataTaskHandle</b></td></tr>
 <tr class="memdesc:a428f45ba7598c726bf8a8e5dec06b8a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хендл задачи по сбору данных с АЦП <br /></td></tr>
+<tr class="memitem:af1d2aedc5023b248db9ea84b89f587f4" id="r_af1d2aedc5023b248db9ea84b89f587f4"><td class="memItemLeft" align="right" valign="top"><a id="af1d2aedc5023b248db9ea84b89f587f4" name="af1d2aedc5023b248db9ea84b89f587f4"></a>
+TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>vMotorControlTaskHandle</b></td></tr>
+<tr class="memdesc:af1d2aedc5023b248db9ea84b89f587f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хендл задачи управления электродвигателем <br /></td></tr>
 <tr class="memitem:a41a83b68a5b9d1c35d14b80fb54a7cda" id="r_a41a83b68a5b9d1c35d14b80fb54a7cda"><td class="memItemLeft" align="right" valign="top"><a id="a41a83b68a5b9d1c35d14b80fb54a7cda" name="a41a83b68a5b9d1c35d14b80fb54a7cda"></a>
 SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>xAdcSemaphore</b> = NULL</td></tr>
 <tr class="memdesc:a41a83b68a5b9d1c35d14b80fb54a7cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хендл бинарного семафора для синхронизации с задачей по сбору данных с АЦП <br /></td></tr>
+<tr class="memitem:a219ee3f434b99d06b38ec18312c788cd" id="r_a219ee3f434b99d06b38ec18312c788cd"><td class="memItemLeft" align="right" valign="top"><a id="a219ee3f434b99d06b38ec18312c788cd" name="a219ee3f434b99d06b38ec18312c788cd"></a>
+QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>xAdcQueue</b> = NULL</td></tr>
+<tr class="memdesc:a219ee3f434b99d06b38ec18312c788cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хендл очереди для передачи значений АЦП в задачу для обработки <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>описание в <a class="el" href="_free_r_t_o_s__project_8h.html" title="используется для работы с FreeRTOS. Содержится создание задач/семафоров, а также их исходный код (лог...">FreeRTOS_project.h</a> </p>
-<dl class="section date"><dt>Дата</dt><dd>03.11.2025 </dd></dl>
-<dl class="section author"><dt>Автор</dt><dd>User </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>09.11.2025 </dd></dl>
+<dl class="section author"><dt>Автор</dt><dd>Prokopyev </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

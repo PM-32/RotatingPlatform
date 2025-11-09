@@ -4,7 +4,7 @@
   * @file   stm32f1xx_it.c
   * @brief  обработчики прерываний (Interrupt Service Routines)
   * @date 	03.11.2025
-  * @author User
+  * @author Prokopyev
   ******************************************************************************
   * @attention
   *

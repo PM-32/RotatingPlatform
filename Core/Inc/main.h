@@ -4,7 +4,7 @@
   * @file 	main.h
   * @brief 	заголовочный файл для main.c
   * @date 	03.11.2025
-  * @author User
+  * @author Prokopyev
   ******************************************************************************
   * @attention
   *
@@ -49,8 +49,6 @@ extern "C" {
 /* USER CODE BEGIN EM */
 
 /* USER CODE END EM */
-
-void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);

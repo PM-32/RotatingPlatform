@@ -39,8 +39,10 @@ Core/Src/SrcFiles/FreeRTOS_project.o: \
  D:/stm32cubeide\ workspace/RP/FreeRTOS/include/semphr.h \
  D:/stm32cubeide\ workspace/RP/FreeRTOS/include/queue.h \
  D:/stm32cubeide\ workspace/RP/FreeRTOS/include/task.h \
+ D:/stm32cubeide\ workspace/RP/FreeRTOS/include/queue.h \
  D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/FreeRTOS_priority_settings.h \
- D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/FreeRTOS_project.h
+ D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/FreeRTOS_project.h \
+ D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/port_settings.h
 D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/FreeRTOS_project.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
@@ -81,5 +83,7 @@ D:/stm32cubeide\ workspace/RP/FreeRTOS/include/list.h:
 D:/stm32cubeide\ workspace/RP/FreeRTOS/include/semphr.h:
 D:/stm32cubeide\ workspace/RP/FreeRTOS/include/queue.h:
 D:/stm32cubeide\ workspace/RP/FreeRTOS/include/task.h:
+D:/stm32cubeide\ workspace/RP/FreeRTOS/include/queue.h:
 D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/FreeRTOS_priority_settings.h:
 D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/FreeRTOS_project.h:
+D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/port_settings.h:

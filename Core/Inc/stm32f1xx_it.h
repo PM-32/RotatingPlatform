@@ -4,7 +4,7 @@
   * @file   stm32f1xx_it.h
   * @brief 	заголовочный файл для stm32f1xx_it.c
   * @date 	03.11.2025
-  * @author User
+  * @author Prokopyev
   ******************************************************************************
   * @attention
   *

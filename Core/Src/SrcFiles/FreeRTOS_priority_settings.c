@@ -3,11 +3,10 @@
  *
  * @brief 	описание в FreeRTOS_priority_settings.h
  * @date 	03.11.2025
- * @author 	User
+ * @author 	Prokopyev
  */
 
 #include "FreeRTOS_priority_settings.h"
-
 
 /**
  * @brief Настройка приоритетов прерываний\n

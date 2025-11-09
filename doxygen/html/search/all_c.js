@@ -17,5 +17,7 @@ var searchData=
   ['phy_5freset_14',['PHY_RESET',['../stm32f1xx__hal__conf_8h.html#a6f5048620b3dde8583f7f1118e9de187',1,'stm32f1xx_hal_conf.h']]],
   ['phy_5frestart_5fautonegotiation_15',['PHY_RESTART_AUTONEGOTIATION',['../stm32f1xx__hal__conf_8h.html#a66c4b69bd08dc25b6730365d3ff740c9',1,'stm32f1xx_hal_conf.h']]],
   ['phy_5fspeed_5fstatus_16',['PHY_SPEED_STATUS',['../stm32f1xx__hal__conf_8h.html#a74c081bc55e9ff96bf229f44e96c6155',1,'stm32f1xx_hal_conf.h']]],
-  ['phy_5fsr_17',['PHY_SR',['../stm32f1xx__hal__conf_8h.html#a32b55e84d27cf298a77f54b133cd1acc',1,'stm32f1xx_hal_conf.h']]]
+  ['phy_5fsr_17',['PHY_SR',['../stm32f1xx__hal__conf_8h.html#a32b55e84d27cf298a77f54b133cd1acc',1,'stm32f1xx_hal_conf.h']]],
+  ['port_5fsettings_2ec_18',['port_settings.c',['../port__settings_8c.html',1,'']]],
+  ['port_5fsettings_2eh_19',['port_settings.h',['../port__settings_8h.html',1,'']]]
 ];
