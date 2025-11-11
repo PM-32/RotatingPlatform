@@ -2,7 +2,7 @@
  * @file 	FreeRTOS_project.c
  *
  * @brief 	описание в FreeRTOS_project.h
- * @date 	09.11.2025
+ * @date 	11.11.2025
  * @author 	Prokopyev
  */
 
@@ -14,11 +14,12 @@
 // Хендлы
 TaskHandle_t vGetAdcDataTaskHandle; ///< Хендл задачи по сбору данных с АЦП
 TaskHandle_t vMotorControlTaskHandle; ///< Хендл задачи управления электродвигателем
+TaskHandle_t vLedIndicationTaskHandle; ///< Хендл задачи управления светодиодами
 
 SemaphoreHandle_t xAdcSemaphore = NULL; ///< Хендл бинарного семафора для синхронизации с задачей по сбору данных с АЦП
 
 QueueHandle_t xAdcQueue = NULL; ///< Хендл очереди для передачи значений АЦП в задачу для обработки
-
+QueueHandle_t xMotorStatusQueue = NULL; ///< Хендл очереди для передачи статуса электродвигателя в задачу управления светодиодами
 
 /**
  * @brief Создание всех задач, семафоров
@@ -54,6 +55,12 @@ void TasksCreation(void)
 
 	// Проверка того, что задача успешно создана
 	while (xTaskCreationResult != pdPASS);
+
+	// Задача управления светодиодами
+	xTaskCreationResult = xTaskCreate(vLedIndicationTask, "LED indication task", 128, NULL, 1, &vLedIndicationTaskHandle);
+
+	// Проверка того, что задача успешно создана
+	while (xTaskCreationResult != pdPASS);
 }
 
 
@@ -82,6 +89,13 @@ void QueuesCreation(void)
 
 	// Проверка того, что очередь была успешно создана
 	while (xAdcQueue == NULL);
+
+	// Очередь для передачи статуса двигателя
+	// в задачу управления светодиодами
+	xMotorStatusQueue = xQueueCreate(1, sizeof(motor_status));
+
+	// Проверка того, что очередь была успешно создана
+	while (xMotorStatusQueue == NULL);
 }
 
 
@@ -121,6 +135,10 @@ void vGetAdcDataTask(void* pvParameters)
  */
 void vMotorControlTask(void* pvParameters)
 {
+	// Флаг направления поворота электродвигателя
+	// (1 - нет вращения, 2 - по часовой, 3 - против часовой)
+	uint8_t fTurnDir = 1;
+
 	// Коэффициент преобразования
 	// значений АЦП в скважность ШИМ
 	float coef = 0.0;
@@ -158,7 +176,7 @@ void vMotorControlTask(void* pvParameters)
 
 	// Установка конфигурации портов
 	// для выключения двигателя
-	MotorPortsConfig(motor_cond);
+	MotorPortsConfig(fTurnDir);
 
 	for (;;)
 	{
@@ -200,7 +218,7 @@ void vMotorControlTask(void* pvParameters)
 
 				// Двигатель вращается
 				// по часовой стрелке
-				motor_cond = ROTATES_CLOCKWISE;
+				fTurnDir = 2;
 			}
 
 			else
@@ -210,12 +228,12 @@ void vMotorControlTask(void* pvParameters)
 
 				// Двигатель вращается
 				// против часовой стрелки
-				motor_cond = ROTATES_COUNTERCLOCKWISE;
+				fTurnDir = 3;
 			}
 
-			// Установка конфигурации портов
-			// для управления двигателем и включение ШИМ
-			MotorPortsConfig(motor_cond);
+			// Установка конфигурации портов в зависимости
+			// от направления поворота и включение ШИМ
+			MotorPortsConfig(fTurnDir);
 
 			/*
 			 	Преобразование среднего значения АЦП (потенциометр)
@@ -236,14 +254,63 @@ void vMotorControlTask(void* pvParameters)
 			if (pwm_value > 99)
 				pwm_value = 99;
 
-			// Установка процента скважности ШИМ
-			// по соответствующему направлению вращения
-			// каналу таймера 3
-			if (motor_cond == ROTATES_CLOCKWISE)
+			// Электродвигатель вращается по часовой стрелке
+			if (fTurnDir == 2)
+			{
+				// Установка процента скважности ШИМ на канале 2
 				TIM3->CCR2 = pwm_value;
+
+				// Определение статуса электродвигателя
+				if (pwm_value <= 46)
+					motor_cond = CLOCKWISE_46;
+				else
+				if (pwm_value <= 72)
+					motor_cond = CLOCKWISE_72;
+				else
+				if (pwm_value <= 99)
+					motor_cond = CLOCKWISE_99;
+			}
+
+			// Электродвигатель вращается против часовой стрелки
 			else
-			if (motor_cond == ROTATES_COUNTERCLOCKWISE)
+			if (fTurnDir == 3)
+			{
+				// Установка процента скважности ШИМ на канале 1
 				TIM3->CCR1 = pwm_value;
+
+				// Определение статуса электродвигателя
+				if (pwm_value <= 46)
+					motor_cond = COUNTERCLOCKWISE_46;
+				else
+				if (pwm_value <= 72)
+					motor_cond = COUNTERCLOCKWISE_72;
+				else
+				if (pwm_value <= 99)
+					motor_cond = COUNTERCLOCKWISE_99;
+			}
+
+			// Отправка статуса электродвигателя в очередь
+			xQueueSend(xMotorStatusQueue, &motor_cond, pdMS_TO_TICKS(1000));
+		}
+	}
+}
+
+
+/**
+ * @brief Задача управления светодиодами
+ */
+void vLedIndicationTask(void* pvParameters)
+{
+	// Статус электродвигателя, полученный из очереди
+	int motor_state = 0;
+
+	for (;;)
+	{
+		// Если статус электродвигателя успешно получен
+		if (xQueueReceive(xMotorStatusQueue, &motor_state, pdMS_TO_TICKS(1000)) == pdPASS)
+		{
+			// Управление светодиодами
+			LED_Control((uint8_t) motor_state);
 		}
 	}
 }

@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rotating platform: Исходный файл D:/stm32cubeide workspace/RP/Core/Inc/IncFiles/led_control.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Rotating platform<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('led__control_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">led_control.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="led__control_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef INC_INCFILES_LED_CONTROL_H_</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define INC_INCFILES_LED_CONTROL_H_</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="main_8h.html">main.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8e">   19</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea4cc61cb3a3cf374b35a3c5c117f4d60b">   21</a></span>    <a class="code hl_enumvalue" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea4cc61cb3a3cf374b35a3c5c117f4d60b">OFF_MOTOR</a> = 0b000,              </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea28a93aa1fa8e06b64c582f24ad1f922e">   22</a></span>    <a class="code hl_enumvalue" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea28a93aa1fa8e06b64c582f24ad1f922e">COUNTERCLOCKWISE_46</a> = 0b001,    </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea77144647351434e4906bbac914eb084c">   23</a></span>    <a class="code hl_enumvalue" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea77144647351434e4906bbac914eb084c">COUNTERCLOCKWISE_72</a> = 0b011,    </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea4d92a9cd38a82272f771a031e8311a8b">   24</a></span>    <a class="code hl_enumvalue" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea4d92a9cd38a82272f771a031e8311a8b">COUNTERCLOCKWISE_99</a> = 0b111,    </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea743fee099628235a06af6f4d576ed8b4">   25</a></span>    <a class="code hl_enumvalue" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea743fee099628235a06af6f4d576ed8b4">CLOCKWISE_46</a> = 0b1100,          </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ead8358bc2a2ce06f9ad93a47be4a918fc">   26</a></span>    <a class="code hl_enumvalue" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ead8358bc2a2ce06f9ad93a47be4a918fc">CLOCKWISE_72</a> = 0b1110,          </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea2b4bb30876274943d3b40210fbb53b08">   27</a></span>    <a class="code hl_enumvalue" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea2b4bb30876274943d3b40210fbb53b08">CLOCKWISE_99</a> = 0b1111           </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <a class="code hl_enumeration" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8e">motor_status</a>;</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">extern</span> <a class="code hl_enumeration" href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8e">motor_status</a> motor_cond;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span> <a class="code hl_function" href="led__control_8h.html#a5fc123c6b75a0ac77aa8f0e79c278d34">LED_Control</a>(uint8_t motor_state);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif </span><span class="comment">/* INC_INCFILES_LED_CONTROL_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aled__control_8h_html_a3281d9e1f4a6f6b86af53221c673ea8e"><div class="ttname"><a href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8e">motor_status</a></div><div class="ttdeci">motor_status</div><div class="ttdoc">Текущее состояние электродвигателя (бит 3 указывает на направление поворота: 0 - против часовой,...</div><div class="ttdef"><b>Определения</b> led_control.h:20</div></div>
+<div class="ttc" id="aled__control_8h_html_a3281d9e1f4a6f6b86af53221c673ea8ea28a93aa1fa8e06b64c582f24ad1f922e"><div class="ttname"><a href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea28a93aa1fa8e06b64c582f24ad1f922e">COUNTERCLOCKWISE_46</a></div><div class="ttdeci">@ COUNTERCLOCKWISE_46</div><div class="ttdoc">двигатель вращается против часовой стрелки со скоростью от 20 до 46 %</div><div class="ttdef"><b>Определения</b> led_control.h:22</div></div>
+<div class="ttc" id="aled__control_8h_html_a3281d9e1f4a6f6b86af53221c673ea8ea2b4bb30876274943d3b40210fbb53b08"><div class="ttname"><a href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea2b4bb30876274943d3b40210fbb53b08">CLOCKWISE_99</a></div><div class="ttdeci">@ CLOCKWISE_99</div><div class="ttdoc">двигатель вращается по часовой стрелке со скоростью от 72 до 99%</div><div class="ttdef"><b>Определения</b> led_control.h:27</div></div>
+<div class="ttc" id="aled__control_8h_html_a3281d9e1f4a6f6b86af53221c673ea8ea4cc61cb3a3cf374b35a3c5c117f4d60b"><div class="ttname"><a href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea4cc61cb3a3cf374b35a3c5c117f4d60b">OFF_MOTOR</a></div><div class="ttdeci">@ OFF_MOTOR</div><div class="ttdoc">двигатель выключен</div><div class="ttdef"><b>Определения</b> led_control.h:21</div></div>
+<div class="ttc" id="aled__control_8h_html_a3281d9e1f4a6f6b86af53221c673ea8ea4d92a9cd38a82272f771a031e8311a8b"><div class="ttname"><a href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea4d92a9cd38a82272f771a031e8311a8b">COUNTERCLOCKWISE_99</a></div><div class="ttdeci">@ COUNTERCLOCKWISE_99</div><div class="ttdoc">двигатель вращается против часовой стрелки со скоростью от 72 до 99%</div><div class="ttdef"><b>Определения</b> led_control.h:24</div></div>
+<div class="ttc" id="aled__control_8h_html_a3281d9e1f4a6f6b86af53221c673ea8ea743fee099628235a06af6f4d576ed8b4"><div class="ttname"><a href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea743fee099628235a06af6f4d576ed8b4">CLOCKWISE_46</a></div><div class="ttdeci">@ CLOCKWISE_46</div><div class="ttdoc">двигатель вращается по часовой стрелке со скоростью от 20 до 46 %</div><div class="ttdef"><b>Определения</b> led_control.h:25</div></div>
+<div class="ttc" id="aled__control_8h_html_a3281d9e1f4a6f6b86af53221c673ea8ea77144647351434e4906bbac914eb084c"><div class="ttname"><a href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea77144647351434e4906bbac914eb084c">COUNTERCLOCKWISE_72</a></div><div class="ttdeci">@ COUNTERCLOCKWISE_72</div><div class="ttdoc">двигатель вращается против часовой стрелки со скоростью от 47 до 72%</div><div class="ttdef"><b>Определения</b> led_control.h:23</div></div>
+<div class="ttc" id="aled__control_8h_html_a3281d9e1f4a6f6b86af53221c673ea8ead8358bc2a2ce06f9ad93a47be4a918fc"><div class="ttname"><a href="led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ead8358bc2a2ce06f9ad93a47be4a918fc">CLOCKWISE_72</a></div><div class="ttdeci">@ CLOCKWISE_72</div><div class="ttdoc">двигатель вращается по часовой стрелке со скоростью от 47 до 72%</div><div class="ttdef"><b>Определения</b> led_control.h:26</div></div>
+<div class="ttc" id="aled__control_8h_html_a5fc123c6b75a0ac77aa8f0e79c278d34"><div class="ttname"><a href="led__control_8h.html#a5fc123c6b75a0ac77aa8f0e79c278d34">LED_Control</a></div><div class="ttdeci">void LED_Control(uint8_t motor_state)</div><div class="ttdoc">Функция управления светодиодами</div><div class="ttdef"><b>Определения</b> led_control.c:15</div></div>
+<div class="ttc" id="amain_8h_html"><div class="ttname"><a href="main_8h.html">main.h</a></div><div class="ttdoc">заголовочный файл для main.c</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Core</b></li><li class="navelem"><b>Inc</b></li><li class="navelem"><b>IncFiles</b></li><li class="navelem"><a href="led__control_8h.html">led_control.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

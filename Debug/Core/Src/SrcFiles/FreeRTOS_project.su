@@ -1,6 +1,7 @@
-../Core/Src/SrcFiles/FreeRTOS_project.c:26:6:CreateAll	8	static
-../Core/Src/SrcFiles/FreeRTOS_project.c:42:6:TasksCreation	24	static
-../Core/Src/SrcFiles/FreeRTOS_project.c:63:6:SemaphoresCreation	8	static
-../Core/Src/SrcFiles/FreeRTOS_project.c:77:6:QueuesCreation	8	static
-../Core/Src/SrcFiles/FreeRTOS_project.c:92:6:vGetAdcDataTask	24	static
-../Core/Src/SrcFiles/FreeRTOS_project.c:122:6:vMotorControlTask	32	static
+../Core/Src/SrcFiles/FreeRTOS_project.c:27:6:CreateAll	8	static
+../Core/Src/SrcFiles/FreeRTOS_project.c:43:6:TasksCreation	24	static
+../Core/Src/SrcFiles/FreeRTOS_project.c:70:6:SemaphoresCreation	8	static
+../Core/Src/SrcFiles/FreeRTOS_project.c:84:6:QueuesCreation	8	static
+../Core/Src/SrcFiles/FreeRTOS_project.c:106:6:vGetAdcDataTask	24	static
+../Core/Src/SrcFiles/FreeRTOS_project.c:136:6:vMotorControlTask	40	static
+../Core/Src/SrcFiles/FreeRTOS_project.c:302:6:vLedIndicationTask	24	static

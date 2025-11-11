@@ -42,7 +42,8 @@ Core/Src/SrcFiles/FreeRTOS_priority_settings.o: \
  D:/stm32cubeide\ workspace/RP/FreeRTOS/include/task.h \
  D:/stm32cubeide\ workspace/RP/FreeRTOS/include/queue.h \
  D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/FreeRTOS_priority_settings.h \
- D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/port_settings.h
+ D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/port_settings.h \
+ D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/led_control.h
 D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/FreeRTOS_priority_settings.h:
 D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/FreeRTOS_project.h:
 ../Core/Inc/main.h:
@@ -87,3 +88,4 @@ D:/stm32cubeide\ workspace/RP/FreeRTOS/include/task.h:
 D:/stm32cubeide\ workspace/RP/FreeRTOS/include/queue.h:
 D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/FreeRTOS_priority_settings.h:
 D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/port_settings.h:
+D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/led_control.h:

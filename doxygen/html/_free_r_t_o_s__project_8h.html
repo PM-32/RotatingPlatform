@@ -104,6 +104,7 @@ $(function(){initNavTree('_free_r_t_o_s__project_8h.html','',''); });
 <code>#include &quot;queue.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_free_r_t_o_s__priority__settings_8h_source.html">FreeRTOS_priority_settings.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="port__settings_8h_source.html">port_settings.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="led__control_8h_source.html">led_control.h</a>&quot;</code><br />
 </div>
 <p><a href="_free_r_t_o_s__project_8h_source.html">См. исходные тексты.</a></p>
 <table class="memberdecls">
@@ -128,6 +129,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>vGetAdcDataTask</b> (
 <tr class="memitem:a6713925912ca1a8b7df89ea0f1ab4e40" id="r_a6713925912ca1a8b7df89ea0f1ab4e40"><td class="memItemLeft" align="right" valign="top"><a id="a6713925912ca1a8b7df89ea0f1ab4e40" name="a6713925912ca1a8b7df89ea0f1ab4e40"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>vMotorControlTask</b> (void *pvParameters)</td></tr>
 <tr class="memdesc:a6713925912ca1a8b7df89ea0f1ab4e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задача управления электродвигателем <br /></td></tr>
+<tr class="memitem:a1c03b1c2a8cb21b67a5e39db203b76ae" id="r_a1c03b1c2a8cb21b67a5e39db203b76ae"><td class="memItemLeft" align="right" valign="top"><a id="a1c03b1c2a8cb21b67a5e39db203b76ae" name="a1c03b1c2a8cb21b67a5e39db203b76ae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>vLedIndicationTask</b> (void *pvParameters)</td></tr>
+<tr class="memdesc:a1c03b1c2a8cb21b67a5e39db203b76ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задача управления светодиодами <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Переменные</h2></td></tr>
@@ -152,7 +156,7 @@ TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><b>htim3</b
 <div class="textblock"><p>используется для работы с FreeRTOS.<br  />
 Содержится создание задач/семафоров, а также<br  />
 их исходный код (логика задач). </p>
-<dl class="section date"><dt>Дата</dt><dd>08.11.2025 </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>10.11.2025 </dd></dl>
 <dl class="section author"><dt>Автор</dt><dd>Prokopyev </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

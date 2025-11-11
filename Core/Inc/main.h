@@ -64,6 +64,14 @@ void Error_Handler(void);
 #define MotorOut1_GPIO_Port GPIOA
 #define MotorOut2_Pin GPIO_PIN_7
 #define MotorOut2_GPIO_Port GPIOA
+#define LED1_Pin GPIO_PIN_14
+#define LED1_GPIO_Port GPIOB
+#define LED2_Pin GPIO_PIN_15
+#define LED2_GPIO_Port GPIOB
+#define LED3_Pin GPIO_PIN_8
+#define LED3_GPIO_Port GPIOA
+#define Button_Pin GPIO_PIN_11
+#define Button_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 /* USER CODE END Private defines */

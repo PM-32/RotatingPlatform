@@ -42,7 +42,8 @@ Core/Src/stm32f1xx_it.o: ../Core/Src/stm32f1xx_it.c ../Core/Inc/main.h \
  D:/stm32cubeide\ workspace/RP/FreeRTOS/include/queue.h \
  D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/FreeRTOS_priority_settings.h \
  D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/FreeRTOS_project.h \
- D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/port_settings.h
+ D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/port_settings.h \
+ D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/led_control.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:
 ../Core/Inc/stm32f1xx_hal_conf.h:
@@ -88,3 +89,4 @@ D:/stm32cubeide\ workspace/RP/FreeRTOS/include/queue.h:
 D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/FreeRTOS_priority_settings.h:
 D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/FreeRTOS_project.h:
 D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/port_settings.h:
+D:/stm32cubeide\ workspace/RP/Core/Inc/IncFiles/led_control.h:

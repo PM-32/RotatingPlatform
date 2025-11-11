@@ -123,6 +123,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>vGetAdcDataTask</b> (
 <tr class="memitem:a6713925912ca1a8b7df89ea0f1ab4e40" id="r_a6713925912ca1a8b7df89ea0f1ab4e40"><td class="memItemLeft" align="right" valign="top"><a id="a6713925912ca1a8b7df89ea0f1ab4e40" name="a6713925912ca1a8b7df89ea0f1ab4e40"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>vMotorControlTask</b> (void *pvParameters)</td></tr>
 <tr class="memdesc:a6713925912ca1a8b7df89ea0f1ab4e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задача управления электродвигателем <br /></td></tr>
+<tr class="memitem:a1c03b1c2a8cb21b67a5e39db203b76ae" id="r_a1c03b1c2a8cb21b67a5e39db203b76ae"><td class="memItemLeft" align="right" valign="top"><a id="a1c03b1c2a8cb21b67a5e39db203b76ae" name="a1c03b1c2a8cb21b67a5e39db203b76ae"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>vLedIndicationTask</b> (void *pvParameters)</td></tr>
+<tr class="memdesc:a1c03b1c2a8cb21b67a5e39db203b76ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задача управления светодиодами <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Переменные</h2></td></tr>
@@ -132,16 +135,22 @@ TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>vGetAdcDataTa
 <tr class="memitem:af1d2aedc5023b248db9ea84b89f587f4" id="r_af1d2aedc5023b248db9ea84b89f587f4"><td class="memItemLeft" align="right" valign="top"><a id="af1d2aedc5023b248db9ea84b89f587f4" name="af1d2aedc5023b248db9ea84b89f587f4"></a>
 TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>vMotorControlTaskHandle</b></td></tr>
 <tr class="memdesc:af1d2aedc5023b248db9ea84b89f587f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хендл задачи управления электродвигателем <br /></td></tr>
+<tr class="memitem:a699748ad3f54b2979af1839e0d903b20" id="r_a699748ad3f54b2979af1839e0d903b20"><td class="memItemLeft" align="right" valign="top"><a id="a699748ad3f54b2979af1839e0d903b20" name="a699748ad3f54b2979af1839e0d903b20"></a>
+TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>vLedIndicationTaskHandle</b></td></tr>
+<tr class="memdesc:a699748ad3f54b2979af1839e0d903b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хендл задачи управления светодиодами <br /></td></tr>
 <tr class="memitem:a41a83b68a5b9d1c35d14b80fb54a7cda" id="r_a41a83b68a5b9d1c35d14b80fb54a7cda"><td class="memItemLeft" align="right" valign="top"><a id="a41a83b68a5b9d1c35d14b80fb54a7cda" name="a41a83b68a5b9d1c35d14b80fb54a7cda"></a>
 SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>xAdcSemaphore</b> = NULL</td></tr>
 <tr class="memdesc:a41a83b68a5b9d1c35d14b80fb54a7cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хендл бинарного семафора для синхронизации с задачей по сбору данных с АЦП <br /></td></tr>
 <tr class="memitem:a219ee3f434b99d06b38ec18312c788cd" id="r_a219ee3f434b99d06b38ec18312c788cd"><td class="memItemLeft" align="right" valign="top"><a id="a219ee3f434b99d06b38ec18312c788cd" name="a219ee3f434b99d06b38ec18312c788cd"></a>
 QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>xAdcQueue</b> = NULL</td></tr>
 <tr class="memdesc:a219ee3f434b99d06b38ec18312c788cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хендл очереди для передачи значений АЦП в задачу для обработки <br /></td></tr>
+<tr class="memitem:a0954a0610cc7d0c68b171ac745c04dbb" id="r_a0954a0610cc7d0c68b171ac745c04dbb"><td class="memItemLeft" align="right" valign="top"><a id="a0954a0610cc7d0c68b171ac745c04dbb" name="a0954a0610cc7d0c68b171ac745c04dbb"></a>
+QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>xMotorStatusQueue</b> = NULL</td></tr>
+<tr class="memdesc:a0954a0610cc7d0c68b171ac745c04dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хендл очереди для передачи статуса электродвигателя в задачу управления светодиодами <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>описание в <a class="el" href="_free_r_t_o_s__project_8h.html" title="используется для работы с FreeRTOS. Содержится создание задач/семафоров, а также их исходный код (лог...">FreeRTOS_project.h</a> </p>
-<dl class="section date"><dt>Дата</dt><dd>09.11.2025 </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>11.11.2025 </dd></dl>
 <dl class="section author"><dt>Автор</dt><dd>Prokopyev </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

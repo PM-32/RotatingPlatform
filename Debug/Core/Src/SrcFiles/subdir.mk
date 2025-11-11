@@ -7,16 +7,19 @@
 C_SRCS += \
 ../Core/Src/SrcFiles/FreeRTOS_priority_settings.c \
 ../Core/Src/SrcFiles/FreeRTOS_project.c \
+../Core/Src/SrcFiles/led_control.c \
 ../Core/Src/SrcFiles/port_settings.c 
 
 OBJS += \
 ./Core/Src/SrcFiles/FreeRTOS_priority_settings.o \
 ./Core/Src/SrcFiles/FreeRTOS_project.o \
+./Core/Src/SrcFiles/led_control.o \
 ./Core/Src/SrcFiles/port_settings.o 
 
 C_DEPS += \
 ./Core/Src/SrcFiles/FreeRTOS_priority_settings.d \
 ./Core/Src/SrcFiles/FreeRTOS_project.d \
+./Core/Src/SrcFiles/led_control.d \
 ./Core/Src/SrcFiles/port_settings.d 
 
 
@@ -27,7 +30,7 @@ Core/Src/SrcFiles/%.o Core/Src/SrcFiles/%.su Core/Src/SrcFiles/%.cyclo: ../Core/
 clean: clean-Core-2f-Src-2f-SrcFiles
 
 clean-Core-2f-Src-2f-SrcFiles:
-	-$(RM) ./Core/Src/SrcFiles/FreeRTOS_priority_settings.cyclo ./Core/Src/SrcFiles/FreeRTOS_priority_settings.d ./Core/Src/SrcFiles/FreeRTOS_priority_settings.o ./Core/Src/SrcFiles/FreeRTOS_priority_settings.su ./Core/Src/SrcFiles/FreeRTOS_project.cyclo ./Core/Src/SrcFiles/FreeRTOS_project.d ./Core/Src/SrcFiles/FreeRTOS_project.o ./Core/Src/SrcFiles/FreeRTOS_project.su ./Core/Src/SrcFiles/port_settings.cyclo ./Core/Src/SrcFiles/port_settings.d ./Core/Src/SrcFiles/port_settings.o ./Core/Src/SrcFiles/port_settings.su
+	-$(RM) ./Core/Src/SrcFiles/FreeRTOS_priority_settings.cyclo ./Core/Src/SrcFiles/FreeRTOS_priority_settings.d ./Core/Src/SrcFiles/FreeRTOS_priority_settings.o ./Core/Src/SrcFiles/FreeRTOS_priority_settings.su ./Core/Src/SrcFiles/FreeRTOS_project.cyclo ./Core/Src/SrcFiles/FreeRTOS_project.d ./Core/Src/SrcFiles/FreeRTOS_project.o ./Core/Src/SrcFiles/FreeRTOS_project.su ./Core/Src/SrcFiles/led_control.cyclo ./Core/Src/SrcFiles/led_control.d ./Core/Src/SrcFiles/led_control.o ./Core/Src/SrcFiles/led_control.su ./Core/Src/SrcFiles/port_settings.cyclo ./Core/Src/SrcFiles/port_settings.d ./Core/Src/SrcFiles/port_settings.o ./Core/Src/SrcFiles/port_settings.su
 
 .PHONY: clean-Core-2f-Src-2f-SrcFiles
 

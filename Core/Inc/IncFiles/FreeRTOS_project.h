@@ -5,7 +5,7 @@
  * Содержится создание задач/семафоров, а также\n
  * их исходный код (логика задач).
  *
- * @date 08.11.2025
+ * @date 10.11.2025
  * @author Prokopyev
  */
 
@@ -20,6 +20,7 @@
 #include "queue.h"
 #include "FreeRTOS_priority_settings.h"
 #include "port_settings.h"
+#include "led_control.h"
 
 
 // Handle
@@ -39,5 +40,6 @@ void QueuesCreation(void);
 
 void vGetAdcDataTask(void* pvParameters);
 void vMotorControlTask(void* pvParameters);
+void vLedIndicationTask(void* pvParameters);
 
 #endif /* INC_FREERTOS_PROJECT_H_ */
