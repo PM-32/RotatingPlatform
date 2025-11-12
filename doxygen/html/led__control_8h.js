@@ -9,5 +9,5 @@ var led__control_8h =
       [ "CLOCKWISE_72", "led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ead8358bc2a2ce06f9ad93a47be4a918fc", null ],
       [ "CLOCKWISE_99", "led__control_8h.html#a3281d9e1f4a6f6b86af53221c673ea8ea2b4bb30876274943d3b40210fbb53b08", null ]
     ] ],
-    [ "LED_Control", "led__control_8h.html#a5fc123c6b75a0ac77aa8f0e79c278d34", null ]
+    [ "LED_Control", "led__control_8h.html#a1623434d13667f093ff8184b3855c6a7", null ]
 ];

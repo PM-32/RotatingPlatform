@@ -2,7 +2,7 @@
  * @file 	FreeRTOS_project.c
  *
  * @brief 	описание в FreeRTOS_project.h
- * @date 	11.11.2025
+ * @date 	12.11.2025
  * @author 	Prokopyev
  */
 
@@ -15,11 +15,14 @@
 TaskHandle_t vGetAdcDataTaskHandle; ///< Хендл задачи по сбору данных с АЦП
 TaskHandle_t vMotorControlTaskHandle; ///< Хендл задачи управления электродвигателем
 TaskHandle_t vLedIndicationTaskHandle; ///< Хендл задачи управления светодиодами
+TaskHandle_t vButtonTaskHandle; ///< Хендл задачи обработки кнопки
 
 SemaphoreHandle_t xAdcSemaphore = NULL; ///< Хендл бинарного семафора для синхронизации с задачей по сбору данных с АЦП
 
 QueueHandle_t xAdcQueue = NULL; ///< Хендл очереди для передачи значений АЦП в задачу для обработки
 QueueHandle_t xMotorStatusQueue = NULL; ///< Хендл очереди для передачи статуса электродвигателя в задачу управления светодиодами
+QueueHandle_t xfLedQueue = NULL; ///< Хендл очереди для передачи значения флага разрешения работы светодиодов
+
 
 /**
  * @brief Создание всех задач, семафоров
@@ -61,6 +64,12 @@ void TasksCreation(void)
 
 	// Проверка того, что задача успешно создана
 	while (xTaskCreationResult != pdPASS);
+
+	// Задача обработки кнопки
+	xTaskCreationResult = xTaskCreate(vButtonTask, "Button task", 128, NULL, 1, &vButtonTaskHandle);
+
+	// Проверка того, что задача успешно создана
+	while (xTaskCreationResult != pdPASS);
 }
 
 
@@ -96,6 +105,12 @@ void QueuesCreation(void)
 
 	// Проверка того, что очередь была успешно создана
 	while (xMotorStatusQueue == NULL);
+
+	// Очередь для передачи значения флага разрешения работы светодиодов
+	xfLedQueue = xQueueCreate(1, sizeof(uint8_t));
+
+	// Проверка того, что очередь была успешно создана
+	while (xfLedQueue == NULL);
 }
 
 
@@ -304,13 +319,68 @@ void vLedIndicationTask(void* pvParameters)
 	// Статус электродвигателя, полученный из очереди
 	int motor_state = 0;
 
+	// Статус флага разрешения работы светодиодов,
+	// полученный из очереди
+	uint8_t fLedCond = 0;
+
 	for (;;)
 	{
 		// Если статус электродвигателя успешно получен
 		if (xQueueReceive(xMotorStatusQueue, &motor_state, pdMS_TO_TICKS(1000)) == pdPASS)
 		{
-			// Управление светодиодами
-			LED_Control((uint8_t) motor_state);
+			// Если получен флаг разрешения работы светодиодов
+			if (xQueueReceive(xfLedQueue, &fLedCond, pdMS_TO_TICKS(1000)) == pdPASS)
+			{
+				// Управление светодиодами
+				LED_Control(fLedCond, (uint8_t) motor_state);
+			}
 		}
+	}
+}
+
+
+/**
+ * @brief Задача обработки кнопки
+ */
+void vButtonTask(void* pvParameters)
+{
+	// Флаг разрешения работы светодиодов
+	// (0 - выключить светодиоды,
+	//  1 - включить светодиоды)
+	uint8_t fLedState = 0;
+
+	// Переменные для обработки кнопки
+	static uint8_t pState = 0;
+	static uint32_t tmr = 0;
+	uint8_t state = 0;
+
+	for(;;)
+	{
+		// Чтение состояния кнопки
+		state = HAL_GPIO_ReadPin(Button_GPIO_Port, Button_Pin);
+
+		// Состояние кнопки изменилось и прошел таймер (50 мс)
+		if (pState != state && HAL_GetTick() - tmr >= 50)
+		{
+			// Сброс таймера
+			tmr = HAL_GetTick();
+
+			// Сохранение состояния
+			pState = state;
+
+			// Если кнопка нажата
+			if (state)
+			{
+				// Смена состояния флага
+				// разрешения работы светодиодов
+				if (fLedState)
+					fLedState = 0;
+				else
+					fLedState = 1;
+			}
+		}
+
+		// Отправка флага разрешения работы светодиодов в очередь
+		xQueueSend(xfLedQueue, &fLedState, pdMS_TO_TICKS(1000));
 	}
 }

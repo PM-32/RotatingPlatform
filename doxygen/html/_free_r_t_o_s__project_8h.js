@@ -4,6 +4,7 @@ var _free_r_t_o_s__project_8h =
     [ "QueuesCreation", "_free_r_t_o_s__project_8h.html#a0dcce925f1ec548dddd80bc0e2edb0a0", null ],
     [ "SemaphoresCreation", "_free_r_t_o_s__project_8h.html#a7554bc7eafeac660cee95eff63ac1180", null ],
     [ "TasksCreation", "_free_r_t_o_s__project_8h.html#a83d4df7ceb2469b32b3390fc2628eb1a", null ],
+    [ "vButtonTask", "_free_r_t_o_s__project_8h.html#a6804fd2260cc4357415205833222c2ac", null ],
     [ "vGetAdcDataTask", "_free_r_t_o_s__project_8h.html#af1f40c8c823036b82d4b06e57375b534", null ],
     [ "vLedIndicationTask", "_free_r_t_o_s__project_8h.html#a1c03b1c2a8cb21b67a5e39db203b76ae", null ],
     [ "vMotorControlTask", "_free_r_t_o_s__project_8h.html#a6713925912ca1a8b7df89ea0f1ab4e40", null ],

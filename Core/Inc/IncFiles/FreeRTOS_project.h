@@ -41,5 +41,6 @@ void QueuesCreation(void);
 void vGetAdcDataTask(void* pvParameters);
 void vMotorControlTask(void* pvParameters);
 void vLedIndicationTask(void* pvParameters);
+void vButtonTask(void* pvParameters);
 
 #endif /* INC_FREERTOS_PROJECT_H_ */

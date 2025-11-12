@@ -126,6 +126,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>vMotorControlTask</b>
 <tr class="memitem:a1c03b1c2a8cb21b67a5e39db203b76ae" id="r_a1c03b1c2a8cb21b67a5e39db203b76ae"><td class="memItemLeft" align="right" valign="top"><a id="a1c03b1c2a8cb21b67a5e39db203b76ae" name="a1c03b1c2a8cb21b67a5e39db203b76ae"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>vLedIndicationTask</b> (void *pvParameters)</td></tr>
 <tr class="memdesc:a1c03b1c2a8cb21b67a5e39db203b76ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задача управления светодиодами <br /></td></tr>
+<tr class="memitem:a6804fd2260cc4357415205833222c2ac" id="r_a6804fd2260cc4357415205833222c2ac"><td class="memItemLeft" align="right" valign="top"><a id="a6804fd2260cc4357415205833222c2ac" name="a6804fd2260cc4357415205833222c2ac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>vButtonTask</b> (void *pvParameters)</td></tr>
+<tr class="memdesc:a6804fd2260cc4357415205833222c2ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задача обработки кнопки <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Переменные</h2></td></tr>
@@ -138,6 +141,9 @@ TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>vMotorControl
 <tr class="memitem:a699748ad3f54b2979af1839e0d903b20" id="r_a699748ad3f54b2979af1839e0d903b20"><td class="memItemLeft" align="right" valign="top"><a id="a699748ad3f54b2979af1839e0d903b20" name="a699748ad3f54b2979af1839e0d903b20"></a>
 TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>vLedIndicationTaskHandle</b></td></tr>
 <tr class="memdesc:a699748ad3f54b2979af1839e0d903b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хендл задачи управления светодиодами <br /></td></tr>
+<tr class="memitem:a06727bd63436b399398ca798456c376f" id="r_a06727bd63436b399398ca798456c376f"><td class="memItemLeft" align="right" valign="top"><a id="a06727bd63436b399398ca798456c376f" name="a06727bd63436b399398ca798456c376f"></a>
+TaskHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>vButtonTaskHandle</b></td></tr>
+<tr class="memdesc:a06727bd63436b399398ca798456c376f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хендл задачи обработки кнопки <br /></td></tr>
 <tr class="memitem:a41a83b68a5b9d1c35d14b80fb54a7cda" id="r_a41a83b68a5b9d1c35d14b80fb54a7cda"><td class="memItemLeft" align="right" valign="top"><a id="a41a83b68a5b9d1c35d14b80fb54a7cda" name="a41a83b68a5b9d1c35d14b80fb54a7cda"></a>
 SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>xAdcSemaphore</b> = NULL</td></tr>
 <tr class="memdesc:a41a83b68a5b9d1c35d14b80fb54a7cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хендл бинарного семафора для синхронизации с задачей по сбору данных с АЦП <br /></td></tr>
@@ -147,10 +153,13 @@ QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>xAdcQueue</b
 <tr class="memitem:a0954a0610cc7d0c68b171ac745c04dbb" id="r_a0954a0610cc7d0c68b171ac745c04dbb"><td class="memItemLeft" align="right" valign="top"><a id="a0954a0610cc7d0c68b171ac745c04dbb" name="a0954a0610cc7d0c68b171ac745c04dbb"></a>
 QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>xMotorStatusQueue</b> = NULL</td></tr>
 <tr class="memdesc:a0954a0610cc7d0c68b171ac745c04dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хендл очереди для передачи статуса электродвигателя в задачу управления светодиодами <br /></td></tr>
+<tr class="memitem:aeb8efce611e414f4b202e93d695059d0" id="r_aeb8efce611e414f4b202e93d695059d0"><td class="memItemLeft" align="right" valign="top"><a id="aeb8efce611e414f4b202e93d695059d0" name="aeb8efce611e414f4b202e93d695059d0"></a>
+QueueHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>xfLedQueue</b> = NULL</td></tr>
+<tr class="memdesc:aeb8efce611e414f4b202e93d695059d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Хендл очереди для передачи значения флага разрешения работы светодиодов <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>описание в <a class="el" href="_free_r_t_o_s__project_8h.html" title="используется для работы с FreeRTOS. Содержится создание задач/семафоров, а также их исходный код (лог...">FreeRTOS_project.h</a> </p>
-<dl class="section date"><dt>Дата</dt><dd>11.11.2025 </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>12.11.2025 </dd></dl>
 <dl class="section author"><dt>Автор</dt><dd>Prokopyev </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->

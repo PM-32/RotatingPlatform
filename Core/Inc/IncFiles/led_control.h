@@ -29,6 +29,6 @@ typedef enum
 
 extern motor_status motor_cond;
 
-void LED_Control(uint8_t motor_state);
+void LED_Control(uint8_t permission_flag, uint8_t motor_state);
 
 #endif /* INC_INCFILES_LED_CONTROL_H_ */

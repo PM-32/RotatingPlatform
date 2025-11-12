@@ -117,8 +117,8 @@ $(function(){initNavTree('led__control_8h.html','',''); });
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a5fc123c6b75a0ac77aa8f0e79c278d34" id="r_a5fc123c6b75a0ac77aa8f0e79c278d34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fc123c6b75a0ac77aa8f0e79c278d34">LED_Control</a> (uint8_t motor_state)</td></tr>
-<tr class="memdesc:a5fc123c6b75a0ac77aa8f0e79c278d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция управления светодиодами  <br /></td></tr>
+<tr class="memitem:a1623434d13667f093ff8184b3855c6a7" id="r_a1623434d13667f093ff8184b3855c6a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1623434d13667f093ff8184b3855c6a7">LED_Control</a> (uint8_t permission_flag, uint8_t motor_state)</td></tr>
+<tr class="memdesc:a1623434d13667f093ff8184b3855c6a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Функция управления светодиодами  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Переменные</h2></td></tr>
@@ -165,8 +165,8 @@ $(function(){initNavTree('led__control_8h.html','',''); });
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Функции</h2>
-<a id="a5fc123c6b75a0ac77aa8f0e79c278d34" name="a5fc123c6b75a0ac77aa8f0e79c278d34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fc123c6b75a0ac77aa8f0e79c278d34">&#9670;&#160;</a></span>LED_Control()</h2>
+<a id="a1623434d13667f093ff8184b3855c6a7" name="a1623434d13667f093ff8184b3855c6a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1623434d13667f093ff8184b3855c6a7">&#9670;&#160;</a></span>LED_Control()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,8 +174,12 @@ $(function(){initNavTree('led__control_8h.html','',''); });
         <tr>
           <td class="memname">void LED_Control </td>
           <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>motor_state</em></span></td><td>)</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>permission_flag</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>motor_state</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -183,7 +187,8 @@ $(function(){initNavTree('led__control_8h.html','',''); });
 <p>Функция управления светодиодами </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">статус_электродвигателя</td><td></td></tr>
+    <tr><td class="paramname">permission_flag</td><td>флаг_разрешения_работы_светодиодов </td></tr>
+    <tr><td class="paramname">motor_state</td><td>статус_электродвигателя </td></tr>
   </table>
   </dd>
 </dl>
