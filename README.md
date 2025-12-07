@@ -17,3 +17,5 @@ of the platform with the possibility of disabling it.
 
 Additionally.
 More information about the project can be found in the "Documentation" folder.
+
+![MPRP_Pic](https://github.com/user-attachments/assets/57a88b66-8dc2-4ad1-b60f-0c3398ae090b)
