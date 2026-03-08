@@ -6,7 +6,7 @@
  * требуемого направления поворота двигателя.
  *
  * @date 	11.11.2025
- * @author 	Prokopyev
+ * @author 	PM-32
  */
 
 #ifndef INC_INCFILES_PORT_SETTINGS_H_

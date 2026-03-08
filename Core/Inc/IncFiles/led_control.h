@@ -3,7 +3,7 @@
  *
  * @brief 	здесь содержится функция управления светодиодами
  * @date 	11.11.2025
- * @author 	Prokopyev
+ * @author 	PM-32
  */
 
 #ifndef INC_INCFILES_LED_CONTROL_H_

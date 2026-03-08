@@ -3,7 +3,7 @@
  *
  * @brief 	описание в FreeRTOS_project.h
  * @date 	12.11.2025
- * @author 	Prokopyev
+ * @author 	PM-32
  */
 
 #include "FreeRTOS_project.h"

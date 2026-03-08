@@ -18,7 +18,7 @@
  * можно установить численные значения от 6 до 15.
  *
  * @date 	03.11.2025
- * @author 	Prokopyev
+ * @author 	PM-32
  */
 
 #ifndef INC_INCFILES_FREERTOS_PRIORITY_SETTINGS_H_

@@ -6,7 +6,7 @@
  * их исходный код (логика задач).
  *
  * @date 10.11.2025
- * @author Prokopyev
+ * @author PM-32
  */
 
 #ifndef INC_FREERTOS_PROJECT_H_

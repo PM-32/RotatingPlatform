@@ -3,7 +3,7 @@
  *
  * @brief 	описание в FreeRTOS_priority_settings.h
  * @date 	03.11.2025
- * @author 	Prokopyev
+ * @author 	PM-32
  */
 
 #include "FreeRTOS_priority_settings.h"

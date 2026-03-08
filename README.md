@@ -2,7 +2,7 @@
 
 (RU)
 Краткое описание проекта:
-проект вращающейся платформы на базе STM32F103C8T6. Имеется возможность
+Проект вращающейся платформы на базе STM32F103C8T6. Имеется возможность
 ручной регулировки скорости и направления вращения. Также есть индикация
 текущего состояния платформы с возможностью её отключения.
 
@@ -10,12 +10,10 @@
 Больше информации о проекте можно найти в папке "Documentation".
 
 (EN)
-Brief description of the project: a rotating platform project based 
+Brief description of the project: A rotating platform project based 
 on the STM32F103C8T6. It is possible to manually adjust the speed and 
 direction of rotation. There is also an indication of the current status 
 of the platform with the possibility of disabling it.
 
 Additionally.
 More information about the project can be found in the "Documentation" folder.
-
-![MPRP_Pic](https://github.com/user-attachments/assets/57a88b66-8dc2-4ad1-b60f-0c3398ae090b)

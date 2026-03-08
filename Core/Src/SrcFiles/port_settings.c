@@ -3,7 +3,7 @@
  *
  * @brief 	описание в port_settings.h
  * @date 	09.11.2025
- * @author 	Prokopyev
+ * @author 	PM-32
  */
 
 #include "port_settings.h"

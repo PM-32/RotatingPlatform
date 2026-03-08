@@ -3,7 +3,7 @@
  *
  * @brief 	описание в led_control.h
  * @date 	12.11.2025
- * @author 	Prokopyev
+ * @author 	PM-32
  */
 
 #include "led_control.h"
